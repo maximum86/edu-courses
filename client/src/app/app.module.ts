@@ -9,12 +9,16 @@ import { FormsModule } from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
+import { CourseListComponent } from './courses/course-list/course-list.component';
+import { CourseDetailComponent } from './courses/course-detail/course-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    CourseListComponent,
+    CourseDetailComponent
   ],
   imports: [
     BrowserModule,
