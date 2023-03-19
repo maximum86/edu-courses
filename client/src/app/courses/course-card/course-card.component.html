@@ -1,0 +1,22 @@
+<div class="card mb-4" *ngIf="course">
+    <div class="card-img-wrapper">
+        <img src="{{course.previewImageLink}}/cover.webp" alt="{{course.title}}" class="card-img-top">
+    </div>
+    <div class="card-body p-1">
+        <h5 class="card-title text-center mb-1">
+            <a routerLink="/courses/{{course.id}}">{{course.title}}</a>
+        </h5>
+        <p class="card-text text-muted text-start text-break">Lessons count: {{course.lessonsCount}}</p>
+        <div>
+            <p class="card-text text-start">Skills:</p>
+            <ul *ngIf="!!course.meta.skills" class="timeline">
+                <li *ngFor="let skill of course.meta.skills">
+                    <div class="timeline-badge">
+                        <span>{{skill}}</span>
+                    </div>
+                </li>
+            </ul>    
+        </div>
+        <p class="card-text text-muted text-start text-break">Rating : {{course.rating}}</p>
+    </div>
+</div>

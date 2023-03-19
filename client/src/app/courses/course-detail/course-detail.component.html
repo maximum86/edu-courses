@@ -1,1 +1,20 @@
-<p>course-detail works!</p>
+
+
+<div class="row" *ngIf="course">
+    <div class="col-12">
+        <div class="row">
+            <app-video-player [url]="firstLessonLink"></app-video-player>
+        </div>
+        <div class="card-body">
+           
+            <div>
+                <strong>Course name:</strong>
+                <p>{{course.title}}</p>
+            </div>
+            <div>
+                <strong>Course description:</strong>
+                <p>{{course.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

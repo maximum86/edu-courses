@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Token } from '../_models/token';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
-  baseUrl = 'http://api.wisey.app/api/v1/auth/anonymous?platform=subscriptions';
+  baseUrl = environment.apiUrl + 'auth/anonymous?platform=subscriptions';
   private currentTokenSource = new BehaviorSubject<Token | null>(null);
   currentToken$ = this.currentTokenSource.asObservable();
   
